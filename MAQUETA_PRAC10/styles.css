@@ -1,0 +1,295 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    padding: 0 20px;
+    height: 80px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    background-color: #000;
+}
+
+/* estils pel cos general de la web després de la capçalera*/
+#cos {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+/* estils per la capçalera*/
+.capcalera {
+    position: relative;
+    height: 400px; 
+    overflow: hidden;
+}
+
+.fondo-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.contenido-capcalera {
+    position: relative;
+    background-color: black; 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 400px;
+    margin: 10%; 
+    text-align: center; 
+    color: white; 
+    margin-top: 120px; 
+}
+
+/* estils pel títol de cada secció*/
+.titol {
+    text-align: left;
+    color: black;
+    margin-left: 20px; 
+    font-size: 30px; 
+    padding-left: 10px;
+}
+
+/* estils per la secció de nosaltres*/
+.nosaltres-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    height: auto;
+}
+
+#nosaltres-image img {
+    width: 300px; 
+    height: auto; 
+    margin-right: 20px;
+    margin-left: 0px; 
+}
+
+#nosaltres-image2 img {
+    width: 300px; 
+    height: auto; 
+    margin-right: 0px;
+    margin-left: 20px; 
+}
+
+.nosaltres-text {
+    font-size: 20px;
+    line-height: 1.5;
+    border: 5px solid #000; 
+    padding: 15px; 
+    border-radius: 10px;  
+}
+
+/* estils per la secció de carta */
+#titol-menu {
+    text-align: center;
+    border: 5px solid #000;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+.carta-container {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 60px;
+    padding-bottom: 30px;
+}
+
+#menu1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-content: center;
+    border: 5px solid #000;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#menu2 {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    align-content: center;
+    border: 5px solid #000;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-container {
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+
+.img-menu {
+    width: 300px;
+    height: 100%;
+}
+
+.overlay {
+    position: relative;
+    background-color: black; 
+    padding: 10px;  
+    width: 100%; 
+    text-align: center; 
+    color: white; 
+    margin-top: 230px; 
+    opacity: 0.7;
+}
+
+.imatges-menu {
+    position: relative;
+    height: 300px;
+    width: 400px; 
+    overflow: hidden;
+}
+/* estils sobre la seccio sobre la galeria */
+.galeria-cont1 {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.galeria-cont1 img {
+    width: 300px;
+    transition: filter 0.3s ease;
+}
+
+.galeria-cont2 img {
+    width: 300px;
+    height: 100%;
+    transition: filter 0.3s ease;
+}
+
+.galeria-cont2 {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.img-galeria:hover {
+    border: 8px solid blue;
+}
+
+.img-galeria:hover img {
+    filter: brightness(70%);
+}
+.img-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img-fosc {
+    filter: brightness(40%);
+}
+
+/* estils sobre la secció de reserva */
+.reserva-container1, .reserva-container2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.reserva-descripcio {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    margin-bottom: 15px; 
+}
+
+.formulari {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulari label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulari input, .formulari textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.reserva-boto {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+button {
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reserva-boto-fixed {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none; 
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000; 
+}
+
+/* estils per la sercció del footer */
+footer {
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: left;
+    gap: 20px; 
+}
+
+.footer-item {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.footer-img {
+    display: flex;
+    align-items: center; 
+    margin-left: auto;
+}
+
+.footer-icon {
+    width: 24px; 
+    height: 24px;
+}

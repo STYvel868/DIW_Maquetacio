@@ -1,0 +1,285 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos para el header */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 5px 10px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+/* Estilos para la capcalera */
+.capcalera {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.fondo-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenido-capcalera {
+    display: none; /* Ocultar según el wireframe */
+}
+
+/* Estilos para el cuerpo principal */
+#cos {
+    max-width: 576px; /* Ajustado a 576px según el wireframe */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Estilos para la sección nosaltres */
+.titol {
+    text-align: left;
+    margin: 30px 0 20px 0;
+    font-size: 24px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.nosaltres-container {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+    gap: 20px;
+}
+
+.nosaltres-text {
+    border: 1px solid #000;
+    padding: 15px;
+    flex: 1;
+}
+
+#nosaltres-image, #nosaltres-image2 {
+    flex: 0 0 40%;
+}
+
+#nosaltres-image img, #nosaltres-image2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+/* Estilos para la sección carta */
+#carta {
+    margin-top: 40px;
+}
+
+#titol-menu {
+    text-align: center;
+    border: 1px solid #000;
+    padding: 10px;
+    margin: 20px 0;
+}
+
+.carta-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#menu1, #menu2 {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    margin: 20px 0 10px 0;
+}
+
+.menu-container {
+    border: 1px solid #000;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+#contingut1, #contingut2 {
+    margin-top: 0;
+}
+
+.imatges-menu {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.imatges-menu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Estilos para la galería - MODIFICADO para quitar las líneas X */
+#galeria {
+    margin-top: 40px;
+}
+
+#galeria-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.galeria-cont1, .galeria-cont2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.img-galeria {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+.img-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Eliminado el pseudo-elemento ::before que creaba las líneas X */
+
+.img-fosc {
+    filter: brightness(40%);
+}
+
+/* Estilos para la sección de reserva */
+#reserva {
+    margin-top: 40px;
+}
+
+.reserva-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reserva-container1, .reserva-container2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.formulari {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulari label {
+    margin-bottom: 5px;
+}
+
+.formulari input {
+    padding: 8px;
+    border: 1px solid #000;
+}
+
+.reserva-descripcio {
+    display: flex;
+    flex-direction: column;
+}
+
+.reserva-descripcio textarea {
+    border: 1px solid #000;
+    height: 80px;
+}
+
+.reserva-boto {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    padding: 8px 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.reserva-boto-fixed {
+    display: none; /* Ocultar según el wireframe */
+}
+
+/* Estilos para el footer */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .nosaltres-container {
+        flex-direction: column;
+    }
+    
+    #nosaltres-image, #nosaltres-image2 {
+        flex: 0 0 100%;
+        margin-bottom: 15px;
+    }
+    
+    .reserva-container1, .reserva-container2 {
+        flex-direction: column;
+    }
+    
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+}

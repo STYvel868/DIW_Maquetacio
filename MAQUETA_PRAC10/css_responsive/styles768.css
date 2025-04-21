@@ -1,0 +1,378 @@
+/* Reset general */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contenedor principal */
+#cos {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* HEADER - Navegación horizontal */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 5px 15px;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+/* CAPCALERA - Ajustada según el wireframe */
+.capcalera {
+    position: relative;
+    height: auto;
+    margin: 30px 0;
+    border: 1px solid #000;
+    padding: 20px;
+    text-align: center;
+}
+
+/* IMPORTANTE: Solo ocultar la imagen de fondo en la capcalera, no en otros lugares */
+.capcalera .fondo-imagen {
+    display: none; /* Ocultar SOLO la imagen de fondo en la capcalera */
+}
+
+.contenido-capcalera {
+    display: block; /* Mostrar contenido según wireframe */
+}
+
+.contenido-capcalera h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.contenido-capcalera p {
+    margin: 0;
+}
+
+/* TÍTULOS DE SECCIÓN */
+.titol {
+    font-size: 24px;
+    margin: 30px 0 15px 0;
+    text-align: left;
+    border-bottom: none;
+}
+
+/* SECCIÓN NOSALTRES */
+.nosaltres {
+    margin-bottom: 40px;
+}
+
+/* Contenedor de imagen y textos */
+.nosaltres-container {
+    margin-bottom: 20px;
+}
+
+.nosaltres-container:first-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+.nosaltres-container:last-of-type {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Primera imagen grande */
+#nosaltres-image {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 20px;
+    border: 1px solid #000;
+    position: relative;
+    overflow: hidden;
+}
+
+#nosaltres-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Textos */
+.nosaltres-text {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Segunda imagen */
+#nosaltres-image2 {
+    width: 100%;
+    height: 150px;
+    border: 1px solid #000;
+    position: relative;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#nosaltres-image2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* SECCIÓN CARTA */
+#carta {
+    margin-bottom: 40px;
+}
+
+/* Título de menú */
+#titol-menu {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+/* Contenedor de carta */
+.carta-container {
+    display: block;
+}
+
+/* Menú 1 y Menú 2 */
+#menu1, #menu2 {
+    width: 80px;
+    text-align: left;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    font-weight: normal;
+    border: none;
+    padding: 0;
+}
+
+/* Contenedores de menú */
+.menu-container {
+    margin-left: 0;
+    margin-bottom: 10px;
+    clear: both;
+}
+
+/* Títulos de contenido */
+#contingut1, #contingut2 {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Párrafos de menú */
+#paragraf1, #paragraf2 {
+    margin-left: 0;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* Imágenes de menú - CORREGIDO */
+.imatges-menu {
+    height: 150px;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+    position: relative;
+    overflow: hidden;
+    background-color: #f5f5f5; /* Fondo para cuando no carga la imagen */
+}
+
+/* IMPORTANTE: Mostrar las imágenes en la sección de menú */
+.imatges-menu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; /* Asegurarse de que se muestren */
+}
+
+/* Overlay de texto en imágenes */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+    padding: 8px;
+    text-align: center;
+    z-index: 2;
+}
+
+/* GALERÍA DE IMÁGENES - 2 COLUMNAS */
+#galeria {
+    margin-bottom: 40px;
+}
+
+#galeria-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.galeria-cont1, .galeria-cont2 {
+    display: contents; /* Para que los hijos se coloquen directamente en el grid */
+}
+
+.img-galeria {
+    height: 120px;
+    border: 1px solid #000;
+    position: relative;
+    overflow: hidden;
+}
+
+.img-galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Aplicar efecto específico a imágenes con clase img-fosc */
+.img-fosc {
+    filter: brightness(0.7); /* Usar filter en lugar de opacity para oscurecer */
+}
+
+/* SECCIÓN RESERVA */
+#reserva {
+    margin-bottom: 40px;
+}
+
+.reserva-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.reserva-container1, .reserva-container2 {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.formulari {
+    flex: 1;
+}
+
+.formulari label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulari input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.reserva-descripcio {
+    margin-bottom: 15px;
+}
+
+.reserva-descripcio label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.reserva-descripcio textarea {
+    width: 100%;
+    height: 80px;
+    padding: 8px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+}
+
+.reserva-boto {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* Botón fijo de reserva (oculto en este wireframe) */
+.reserva-boto-fixed {
+    display: none;
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.footer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #000;
+    padding: 5px 10px;
+}
+
+.footer-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Ocultar imagen del footer según wireframe */
+.footer-img {
+    display: none;
+}
+
+/* Limpiar flotantes */
+.carta-container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Corrección para rutas de imágenes que comienzan con / */
+/* Asegurarse de que todas las imágenes se muestren correctamente */
+img {
+    max-width: 100%;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 576px) {
+    #galeria-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .nosaltres-container:last-of-type {
+        flex-direction: column;
+    }
+    
+    #nosaltres-image2 {
+        width: 100%;
+        margin-top: 15px;
+    }
+    
+    .reserva-container1, .reserva-container2 {
+        flex-direction: column;
+    }
+}

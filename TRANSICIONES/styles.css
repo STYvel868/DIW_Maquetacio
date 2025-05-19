@@ -1,0 +1,408 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    padding: 30px;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+    background-color: black;
+    z-index: 1000; 
+    transition: all 0.3s ease; /* Afegim transició suau */
+}
+
+/* estils pel cos general de la web després de la capçalera*/
+#cos {
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 80px;
+}
+
+.link {
+    text-decoration: none;
+    margin-right: 30px;
+    color: white;
+    font-size: 20px;
+    transition: all 0.3s ease; /* Transició també pels enllaços */
+}
+
+/* estils per la capçalera*/
+.capcalera {
+    position: relative;
+    height: 400px; 
+    overflow: hidden;
+}
+
+.fondo-imagen {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Exercici 2.1 - Animació capçalera */
+@keyframes aparicioCapcalera {
+  0%   { opacity: 0; transform: translateY(100px); color: orange; } /*El text es invisible i està a sota*/
+  50%  { opacity: 0.5; transform: translateY(50px); color: orange; } /*El text es comença a veure i esta més amunt i de color taronja*/
+  100% { opacity: 1; transform: translateY(0); color: white; } /*El text es veu al 100% i ja està a la seva posició de color blanc */
+}
+
+.contenido-capcalera {
+  animation: aparicioCapcalera 2s ease forwards; /*L'animació dura 2 segons i es mant´en l'últim estat*/
+}
+
+.contenido-capcalera {
+    position: relative;
+    background-color: black; 
+    padding: 20px; 
+    border-radius: 10px; 
+    width: 400px;
+    margin: 10%; 
+    text-align: center; 
+    color: white; 
+    margin-top: 120px; 
+}
+
+/* estils pel títol de cada secció*/
+.titol {
+    text-align: left;
+    color: black;
+    margin-left: 20px; 
+    font-size: 30px; 
+    padding-left: 10px;
+}
+/*2.2- Modifiquem el títol per a que augmenti i baixi de tamany a part de que va rotant tant cap a dalt com per a abaix  */
+@keyframes titolAnimat {
+  0%   { color: black; font-size: 30px; transform: rotate(0deg); }
+  25%  { color: darkred; font-size: 32px; transform: rotate(-2deg); } /*canvi de color de negre a un vermell fosc*/
+  50%  { color: black; font-size: 30px; transform: rotate(0deg); }
+  75%  { color: darkred; font-size: 32px; transform: rotate(2deg); } /*canvi de color de negre a un vermell fosc*/
+  100% { color: black; font-size: 30px; transform: rotate(0deg); }
+}
+/*L'animació dura 5 seg en ralitzar-se i ho fa infinitament*/
+#carta .titol {
+  animation: titolAnimat 5s ease-in-out infinite;
+}
+
+
+/* estils per la secció de nosaltres*/
+.nosaltres-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    height: auto;
+}
+
+/* 1.2- Transició 3 propietats a les imatges de NOSALTRES */
+#nosaltres-image img,
+#nosaltres-image2 img {
+    transition: transform 0.5s ease, filter 0.5s ease, border-radius 0.5s ease;
+    border-radius: 0px; /* estat inicial */
+}
+
+/* Efecte quan passes el ratolí, augmenta l'escala, rota i modifiquem el brightness, tambe fem que les esquines s'arrodonixin*/
+#nosaltres-image img:hover,
+#nosaltres-image2 img:hover {
+    transform: scale(1.05) rotate(2deg);
+    filter: brightness(80%);
+    border-radius: 20px;
+}
+
+#nosaltres-image img {
+    width: 300px; 
+    height: auto; 
+    margin-right: 20px;
+    margin-left: 0px; 
+}
+
+#nosaltres-image2 img {
+    width: 300px; 
+    height: auto; 
+    margin-right: 0px;
+    margin-left: 20px; 
+}
+
+.nosaltres-text {
+    font-size: 20px;
+    line-height: 1.5;
+    border: 5px solid #000; 
+    padding: 15px; 
+    border-radius: 10px;  
+}
+
+/* estils per la secció de carta */
+#titol-menu {
+    text-align: center;
+    border: 5px solid #000;
+    border-radius: 10px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 30px;
+}
+
+.carta-container {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap: 60px;
+    padding-bottom: 30px;
+}
+
+#menu1 {
+    grid-row-start: 1;
+    grid-row-end: 3;
+    align-content: center;
+    border: 5px solid #000;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+#menu2 {
+    grid-row-start: 3;
+    grid-row-end: 5;
+    align-content: center;
+    border: 5px solid #000;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-container {
+    grid-column-start: 2;
+    grid-column-end: 6;
+}
+
+.img-menu {
+    width: 300px;
+    height: 100%;
+}
+
+.overlay {
+    position: relative;
+    background-color: black; 
+    padding: 10px;  
+    width: 100%; 
+    text-align: center; 
+    color: white; 
+    margin-top: 230px; 
+    opacity: 0.7;
+}
+
+.imatges-menu {
+    position: relative;
+    height: 300px;
+    width: 400px; 
+    overflow: hidden;
+}
+/* estils sobre la seccio sobre la galeria */
+.galeria-cont1 {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+/* Transcicions suaus */
+.galeria-cont1 img {
+    width: 300px;
+    transition: filter 0.3s ease;
+}
+
+/* Transcicions suaus */
+.galeria-cont2 img {
+    width: 300px;
+    height: 100%;
+    transition: filter 0.3s ease;
+}
+
+.galeria-cont2 {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.img-galeria {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Evita que la imatge surti fora */
+    border: 4px solid transparent;
+    transition: border 0.3s ease;
+}
+
+/*Quan passem el cursor l'envolta una vora blava*/
+.img-galeria:hover {
+    border: 4px solid blue;
+}
+
+.img-galeria:hover img {
+    /* Fem que fagi zoom i fagi una petita rotació i que es posi en blanc i negre*/
+    transform: scale(1.1) rotate(5deg);
+    filter: grayscale(100%);
+}
+
+/* Imatge dins del contenidor */
+.img-galeria img {
+    width: 100%;
+    height: 100%;
+    /*Fem que la transició no sigui inmediata*/
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+
+/* estils sobre la secció de reserva */
+.reserva-container1, .reserva-container2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.reserva-descripcio {
+    display: flex;
+    flex-direction: column;
+    width: 100%; 
+    margin-bottom: 15px; 
+}
+
+.formulari {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulari label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formulari input, .formulari textarea {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.reserva-boto {
+    display: flex;
+    justify-content: flex-end; 
+}
+
+button {
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.reserva-boto-fixed {
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    text-decoration: none; 
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1000; 
+}
+
+/*CSS pel video que sigui responsive i estigui centrar*/
+#video {
+  text-align: center;
+  padding: 20px;
+}
+
+#video video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+
+/* Exercici 4 - Estils del vídeo amb controls personalitzats */
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Exercici 4 - Estils del vídeo amb controls personalitzats */
+.video-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;/* Amplada màxima del video*/
+  background-color: rgba(0, 0, 0, 0.5); /* fons fosc i transparent */
+  display: flex; /* Centrem els icones amb un espai entr ells i la barra negre*/
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+/*Customització dels icones per a que siguin mes visibles*/
+.material-icons {
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+/* Customitació per quan pasem el cursor per sobre d'algun icon*/
+.material-icons:hover {
+  box-shadow: 0 0 10px white;
+}
+
+
+/* estils per la sercció del footer */
+footer {
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+    margin-top: 20px; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: left;
+    gap: 20px; 
+}
+
+.footer-item {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+}
+
+.footer-img {
+    display: flex;
+    align-items: center; 
+    margin-left: auto;
+}
+
+.footer-icon {
+    width: 24px; 
+    height: 24px;
+}
+

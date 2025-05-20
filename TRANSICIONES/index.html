@@ -6,10 +6,11 @@
     <title>Pràctica 10</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <!--seccio de header amb links-->
-    <div class="header">
+    <div class="header" id="navbar">
         <div><a class="link" href="#nosaltres">Nosaltres</a></div>
         <div><a class="link" href="#carta">Carta</a></div>
         <div><a class="link" href="#galeria">Galeria</a></div>
@@ -153,7 +154,34 @@
                     <button type="submit">Reservar</button>
                 </div>
             </form>
-        </div>     
+        </div>
+        <!-- secico de video -->
+        <div id="video">
+            <h2 class="titol">Video</h2>
+            <video controls muted>
+                <source src="img/video.mp4" type="video/mp4">
+            </video>
+             Error
+        </div>
+
+        <!-- Exercici 4 - Vídeo amb controls personalitzats -->
+        <div id="video-icones" class="video-container">
+            <h2 class="titol">Vídeo amb icones</h2>
+            <video id="myVideo" muted>
+                <!-- Ruta al fitxer de vídeo -->
+                <source src="img/video.mp4" type="video/mp4">
+                <!-- Missatge alternatiu si el navegador no suporta vídeos -->
+                Error
+            </video>
+            
+            <!-- Controls personalitzats sobre els videos amb el-->
+            <div class="video-controls">
+                <span id="play" class="material-icons">play_circle</span>
+                <span id="pause" class="material-icons">pause_circle</span>
+                <span id="sound" class="material-icons">volume_up</span>
+                <span id="mute" class="material-icons">volume_off</span>
+            </div>
+        </div>
         <a href="#reserva" class="reserva-boto-fixed">Reservar</a>     
     </div>
     <!-- seccio de footer -->    
@@ -172,5 +200,7 @@
             </div>
         </div>
     </footer>
+    <!-- Script JS per controlar el vídeo -->
+    <script src="controls.js"></script>
 </body>
 </html>
